@@ -73,7 +73,7 @@ class Person {
 
 //  [ + ] [ + ] [ + ] [ + ] Node list to array
 // es5
-// let buttons =  document.querySelectorAll('.btn');
+// let buttons =  document.getElementsByClassName('btn');
 
 // let buttonsArr = Array.prototype.slice.call(buttons);
 // console.log(buttonsArr);
@@ -96,9 +96,21 @@ let buttonsArry = Array.from(buttons);
 //  [ + ] [ + ] [ + ] [ + ] Break a loop
 // es5
 
-for(let i=0; i < buttonsArry.length; i++){
-    if(buttonsArry[i].className.includes === "btn-danger"){
+// for(let i=0; i < buttonsArr.length; i++){
+//     if(buttonsArr[i].className === "btn-danger"){
+//         continue;
+//     }
+//     buttonsArr[i].textContent = '_Esse vai ! ';
+// }
+
+//  [ + ] [ + ] [ + ] [ + ] Break a loop
+// es6
+
+
+for(const curr of buttonsArry){
+    console.log(curr.className);
+    if(curr.className.includes('btn-danger')){
         break;
     }
-    buttonsArry[i].textContent = 'Esse vai ! ';
+    curr.textContent === 'esse não!';
 }
