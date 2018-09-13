@@ -71,20 +71,30 @@ class Person {
 
 
 // >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5
-
 // const lines = document.querySelectorAll('.p-3');
-
 // const linesArr = Array.prototype.slice.call(lines);
 // console.log(linesArr);
 // linesArr.forEach(curr=>{
 //     curr.style.backgroundColor = 'red';
 // });
 
+
 // >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES6
+// const lines = document.querySelectorAll('.p-3');
+// Array.from(lines).forEach(curr=>{
+//     curr.style.backgroundColor = 'blue';
+//     curr.style.color = 'white';
+// });
 
+
+// >>> >>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5 - Continue Break
 const lines = document.querySelectorAll('.p-3');
-
-Array.from(lines).forEach(curr=>{
-    curr.style.backgroundColor = 'blue';
-    curr.style.color = 'white';
-});
+const linesArr = Array.prototype.slice.call(lines);
+for(let i=0;i<linesArr.length;i++){
+    if(linesArr[i].className === 'blue-blox'){
+        linesArr[i].style.backgroundColor = 'red';
+        break;
+    }
+    linesArr[i].style.backgroundColor = 'red';
+    linesArr[i].textContent = 'Celtas';
+}
