@@ -125,11 +125,23 @@ class Person {
 
 // $$$$$$$$$$$$$$$$$$$$$$$$
 // Array ES6 - Cheking one element of the Array
-const ages = [ 16, 12, 17, 9, 10, 22,  13 ];
+// const ages = [ 16, 12, 17, 9, 10, 22,  13 ];
 
-const fullAge = ages.map(curr => curr >= 18);
-console.log(fullAge);
+// const fullAge = ages.map(curr => curr >= 18);
+// console.log(fullAge);
 
-console.log(ages.find(curr => curr >= 18));
+// console.log(ages.find(curr => curr >= 18));
 
-console.log(ages.findIndex(curr => curr >= 18));
+// console.log(ages.findIndex(curr => curr >= 18));
+
+
+// $$$$$$$$$$$$$$$$$$$$$$$$ Passing a entire Array into a function
+// es5
+
+const numList = (a,b,c,d)=>{
+    return a+b+c+d;
+}
+console.log(numList(23,34,66,88));
+var numArr = [23,34,66,88];
+const sum2 = numList.apply(null, numArr);
+console.log(sum2);
