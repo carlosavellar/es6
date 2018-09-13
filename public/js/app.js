@@ -88,11 +88,24 @@ class Person {
 
 
 // >>> >>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5 - Continue Break
+// const lines = document.querySelectorAll('.p-3');
+// const linesArr = Array.prototype.slice.call(lines);
+// for(let i=0;i<linesArr.length;i++){
+//     if(linesArr[i].className === 'blue-blox'){
+//         linesArr[i].style.backgroundColor = 'red';
+//         break;
+//     }
+//     linesArr[i].style.backgroundColor = 'red';
+//     linesArr[i].textContent = 'Celtas';
+// }
+
+
+// >>> >>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES6 - Continue Break
 const lines = document.querySelectorAll('.p-3');
-const linesArr = Array.prototype.slice.call(lines);
-for(let i=0;i<linesArr.length;i++){
-    if(linesArr[i].className === 'blue-blox'){
-        linesArr[i].style.backgroundColor = 'red';
+const linesArr = Array.from(lines);
+for(const curr of linesArr){
+    if(curr[i].className === 'blue-blox'){
+        linesArr[i].textContent = 'Celtas';
         break;
     }
     linesArr[i].style.backgroundColor = 'red';
