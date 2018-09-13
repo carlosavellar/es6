@@ -87,6 +87,18 @@ class Person {
 // es6
 let buttons =  document.querySelectorAll('.btn');
 let buttonsArry = Array.from(buttons);
-buttonsArry.forEach(curr=>{
-    curr.style.background = 'red';
-});
+// buttonsArry.forEach(curr=>{
+//     curr.style.background = 'red';
+// });
+
+
+
+//  [ + ] [ + ] [ + ] [ + ] Break a loop
+// es5
+
+for(let i=0; i < buttonsArry.length; i++){
+    if(buttonsArry[i].className.includes === "btn-danger"){
+        break;
+    }
+    buttonsArry[i].textContent = 'Esse vai ! ';
+}
