@@ -43,13 +43,13 @@ class Person {
 }
 
 
-// >>>>>>> [ + ] [ + ] [ + ] [ + ] Section 07 - 109 - Destructuring Array
+// $$$$$$$$$$$$$$$$$$$$$$$$ Section 07 - 109 - Destructuring Array
 // const [ myname, myage] = ['josé Carlos Destr', 12];
 // console.log(myname);
 
 
 
-//  [ + ] [ + ] [ + ] [ + ] Section 07 - 109 - Destructuring Obj
+// $$$$$$$$$$$$$$$$$$$$$$$$ Section 07 - 109 - Destructuring Obj
 // const belonging={
 //     house: 'Michigan',
 //     car: 'Bentley'
@@ -59,7 +59,7 @@ class Person {
 
 
 
-//  [ + ] [ + ] [ + ] [ + ] Section 07 - 109 - Destructuring function
+// $$$$$$$$$$$$$$$$$$$$$$$$ Section 07 - 109 - Destructuring function
 // function myAgeandretirement(years){
 //     let now = new Date().getFullYear();
 //     let age = now - years;
@@ -70,7 +70,7 @@ class Person {
 // console.log(`My age is ${age} and i have ${retirement} years to retire.`);
 
 
-// >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5
+// $$$$$$$$$$$$$$$$$$$$$$$$ - Node List to array ES5
 // const lines = document.querySelectorAll('.p-3');
 // const linesArr = Array.prototype.slice.call(lines);
 // console.log(linesArr);
@@ -79,7 +79,7 @@ class Person {
 // });
 
 
-// >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES6
+// $$$$$$$$$$$$$$$$$$$$$$$$ - Node List to array ES6
 // const lines = document.querySelectorAll('.p-3');
 // Array.from(lines).forEach(curr=>{
 //     curr.style.backgroundColor = 'blue';
@@ -87,7 +87,7 @@ class Person {
 // });
 
 
-// >>> >>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5 - Continue Break
+// $$$$$$$$$$$$$$$$$$$$$$$$ - Node List to array ES5 - Continue Break
 // const lines = document.querySelectorAll('.p-3');
 // const linesArr = Array.prototype.slice.call(lines);
 // for(let i=0;i<linesArr.length;i++){
@@ -100,14 +100,27 @@ class Person {
 // }
 
 
-// >>> >>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES6 - Continue Break
-const lines = document.querySelectorAll('.p-3');
-const linesArr = Array.from(lines);
-for(const curr of linesArr){
-    if(curr[i].className === 'blue-blox'){
-        linesArr[i].textContent = 'Celtas';
-        break;
-    }
-    linesArr[i].style.backgroundColor = 'red';
-    linesArr[i].textContent = 'Celtas';
-}
+// $$$$$$$$$$$$$$$$$$$$$$$$ - Node List to array ES6 - Continue Break
+// const lines = document.querySelectorAll('.p-3');
+// const linesArr = Array.from(lines);
+// for(const curr of linesArr){
+//     if(curr[i].className === 'blue-blox'){
+//         linesArr[i].textContent = 'Celtas';
+//         break;
+//     }
+//     linesArr[i].style.backgroundColor = 'red';
+//     linesArr[i].textContent = 'Celtas';
+// }
+
+
+
+// $$$$$$$$$$$$$$$$$$$$$$$$
+// Node List to array ES5 - Cheking one element of the Array
+
+const ages = [ 12, 16, 12, 17, 9, 21, 13];
+
+const over18 = ages.map(curr=>{
+    console.log(curr >= 18);
+});
+
+
