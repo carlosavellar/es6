@@ -116,9 +116,18 @@ class Person {
 
 // $$$$$$$$$$$$$$$$$$$$$$$$
 // Array ES5 - Cheking one element of the Array
-const ages = [ 22, 16, 12, 17, 9, 10, 13 ];
-const fullAge = ages.map(curr=>{
-    console.log(curr >= 18);
-});
-console.log(ages[fullAge.indexOf(true)]);
+// const ages = [ 22, 16, 12, 17, 9, 10, 13 ];
+// const fullAge = ages.map(curr=>{
+//     console.log(curr >= 18);
+// });
+// console.log(ages[fullAge.indexOf(true)]);
 
+
+// $$$$$$$$$$$$$$$$$$$$$$$$
+// Array ES6 - Cheking one element of the Array
+const ages = [ 22, 16, 12, 17, 9, 10, 13 ];
+
+const fullAge = ages.map(curr => curr >= 18);
+console.log(fullAge);
+
+console.log(ages.find(curr => curr >= 18));
