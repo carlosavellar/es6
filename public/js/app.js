@@ -136,12 +136,25 @@ class Person {
 
 
 // $$$$$$$$$$$$$$$$$$$$$$$$ Passing a entire Array into a function
-// es5
+// es5 
 
-const numList = (a,b,c,d)=>{
-    return a+b+c+d;
-}
-console.log(numList(23,34,66,88));
-var numArr = [23,34,66,88];
-const sum2 = numList.apply(null, numArr);
-console.log(sum2);
+// const numList = (a,b,c,d)=>{
+//     return a+b+c+d;
+// }
+// console.log(numList(23,34,66,88));
+// var numArr = [23,34,66,88];
+// const sum2 = numList.apply(null, numArr);
+// console.log(sum2);
+
+
+
+// $$$$$$$$$$$$$$$$$$$$$$$$ Passing a entire Array into a function
+// es6 - spread operator
+
+const someAges = (a,b,c)=>{
+    return a+b+c;
+};
+const ages = [12,45,67];
+
+const sum3 = someAges(...ages);
+console.log(sum3);
