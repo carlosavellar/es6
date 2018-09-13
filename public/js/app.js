@@ -43,7 +43,7 @@ class Person {
 }
 
 
-//  [ + ] [ + ] [ + ] [ + ] Section 07 - 109 - Destructuring Array
+// >>>>>>> [ + ] [ + ] [ + ] [ + ] Section 07 - 109 - Destructuring Array
 // const [ myname, myage] = ['josé Carlos Destr', 12];
 // console.log(myname);
 
@@ -70,47 +70,12 @@ class Person {
 // console.log(`My age is ${age} and i have ${retirement} years to retire.`);
 
 
+// >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5
 
-//  [ + ] [ + ] [ + ] [ + ] Node list to array
-// es5
-// let buttons =  document.getElementsByClassName('btn');
+const lines = document.querySelectorAll('.p-3');
 
-// let buttonsArr = Array.prototype.slice.call(buttons);
-// console.log(buttonsArr);
-// buttonsArr.forEach(curr=>{
-//     curr.style.background = 'blue';
-// });
-
-
-
-//  [ + ] [ + ] [ + ] [ + ] Node list to array
-// es6
-let buttons =  document.querySelectorAll('.btn');
-let buttonsArry = Array.from(buttons);
-// buttonsArry.forEach(curr=>{
-//     curr.style.background = 'red';
-// });
-
-
-
-//  [ + ] [ + ] [ + ] [ + ] Break a loop
-// es5
-
-// for(let i=0; i < buttonsArr.length; i++){
-//     if(buttonsArr[i].className === "btn-danger"){
-//         continue;
-//     }
-//     buttonsArr[i].textContent = '_Esse vai ! ';
-// }
-
-//  [ + ] [ + ] [ + ] [ + ] Break a loop
-// es6
-
-
-for(const curr of buttonsArry){
-    console.log(curr.className);
-    if(curr.className.includes('btn-danger')){
-        break;
-    }
-    curr.textContent === 'esse não!';
-}
+const linesArr = Array.prototype.slice.call(lines);
+console.log(linesArr);
+linesArr.forEach(curr=>{
+    curr.style.backgroundColor = 'red';
+});

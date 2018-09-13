@@ -27,6 +27,7 @@ gulp.task('scripts', () => {
         .pipe(browserSync.stream());
     console.log('scripts');
 });
+
 gulp.task('js-watch', ['scripts'], function (done) {
     browserSync.reload();
     done();
