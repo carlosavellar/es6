@@ -115,12 +115,10 @@ class Person {
 
 
 // $$$$$$$$$$$$$$$$$$$$$$$$
-// Node List to array ES5 - Cheking one element of the Array
-
-const ages = [ 12, 16, 12, 17, 9, 21, 13];
-
-const over18 = ages.map(curr=>{
+// Array ES5 - Cheking one element of the Array
+const ages = [ 22, 16, 12, 17, 9, 10, 13];
+const fullAge = ages.map(curr=>{
     console.log(curr >= 18);
 });
-
+console.log(fullAge.indexOf(true));
 
