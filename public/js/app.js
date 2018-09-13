@@ -72,10 +72,19 @@ class Person {
 
 // >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES5
 
+// const lines = document.querySelectorAll('.p-3');
+
+// const linesArr = Array.prototype.slice.call(lines);
+// console.log(linesArr);
+// linesArr.forEach(curr=>{
+//     curr.style.backgroundColor = 'red';
+// });
+
+// >>>>>>> [ + ] [ + ] [ + ] [ + ] - Node List to array ES6
+
 const lines = document.querySelectorAll('.p-3');
 
-const linesArr = Array.prototype.slice.call(lines);
-console.log(linesArr);
-linesArr.forEach(curr=>{
-    curr.style.backgroundColor = 'red';
+Array.from(lines).forEach(curr=>{
+    curr.style.backgroundColor = 'blue';
+    curr.style.color = 'white';
 });
