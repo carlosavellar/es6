@@ -73,11 +73,20 @@ class Person {
 
 //  [ + ] [ + ] [ + ] [ + ] Node list to array
 // es5
+// let buttons =  document.querySelectorAll('.btn');
 
+// let buttonsArr = Array.prototype.slice.call(buttons);
+// console.log(buttonsArr);
+// buttonsArr.forEach(curr=>{
+//     curr.style.background = 'blue';
+// });
+
+
+
+//  [ + ] [ + ] [ + ] [ + ] Node list to array
+// es6
 let buttons =  document.querySelectorAll('.btn');
-
-let buttonsArr = Array.prototype.slice.call(buttons);
-console.log(buttonsArr);
-buttonsArr.forEach(curr=>{
-    curr.style.background = 'blue';
+let buttonsArry = Array.from(buttons);
+buttonsArry.forEach(curr=>{
+    curr.style.background = 'red';
 });
