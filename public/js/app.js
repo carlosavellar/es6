@@ -151,10 +151,16 @@ class Person {
 // $$$$$$$$$$$$$$$$$$$$$$$$ Passing a entire Array into a function
 // es6 - spread operator
 
-const someAges = (a,b,c)=>{
-    return a+b+c;
-};
-const ages = [12,45,67];
+// const someAges = (a,b,c, d)=>{
+//     return a+b+c+d;
+// };
+// const ages = [12,45,67, 45];
 
-const sum3 = someAges(...ages);
-console.log(sum3);
+// const sum3 = someAges(...ages);
+// console.log(sum3);
+
+const family1 = ['Sally','Mill','Kati','Carlos'];
+const family2 = ['Michael','Sick','Ministroiter','Sula'];
+
+const joinFamily = ['Jhon',...family2, ...family1];
+console.log(joinFamily);
