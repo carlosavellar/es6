@@ -159,8 +159,22 @@ class Person {
 // const sum3 = someAges(...ages);
 // console.log(sum3);
 
-const family1 = ['Sally','Mill','Kati','Carlos'];
-const family2 = ['Michael','Sick','Ministroiter','Sula'];
+// const family1 = ['Sally','Mill','Kati','Carlos'];
+// const family2 = ['Michael','Sick','Ministroiter','Sula'];
 
-const joinFamily = ['Jhon',...family2, ...family1];
-console.log(joinFamily);
+// const joinFamily = ['Jhon',...family2, ...family1];
+// console.log(joinFamily);
+
+
+
+// $$$$$$$$$$$$$$$$$$$$$$$$ Spreed to acessing node elements
+
+const h1 = document.querySelector('h1');
+
+const lines = document.querySelectorAll('.p-3');
+
+const union = [h1, ...lines];
+
+Array.from(union).forEach(curr=>{
+    curr.style.color = 'red';
+});
