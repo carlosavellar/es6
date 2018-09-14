@@ -167,14 +167,23 @@ class Person {
 
 
 
-// $$$$$$$$$$$$$$$$$$$$$$$$ Spreed to acessing node elements
+// // $$$$$$$$$$$$$$$$$$$$$$$$ Spreed to acessing node elements
+// const h1 = document.querySelector('h1');
 
-const h1 = document.querySelector('h1');
+// const lines = document.querySelectorAll('.p-3');
 
-const lines = document.querySelectorAll('.p-3');
+// const union = [h1, ...lines];
 
-const union = [h1, ...lines];
+// Array.from(union).forEach(curr=>{
+//     curr.style.color = 'red';
+// });
 
-Array.from(union).forEach(curr=>{
-    curr.style.color = 'red';
-});
+
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$ Argumnets property es5
+
+function ages(){
+    console.log(arguments);
+}
+
+ages('love', 12, 345);
