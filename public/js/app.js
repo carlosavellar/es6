@@ -196,6 +196,6 @@ function isFullAge (){
         console.log((now - curr) >= 18);
     });
 }
-isFullAge(1987, 1982, 2010, 2002);
+isFullAge(1987, 1982, 2010, 2002, 2017);
 
 
