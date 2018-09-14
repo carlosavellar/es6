@@ -181,9 +181,21 @@ class Person {
 
 
 // // $$$$$$$$$$$$$$$$$$$$$$$$ Argumnets property es5
+// function ages(){
+//     console.log(arguments);
+// }
+// ages('love', 12, 345);
 
-function ages(){
-    console.log(arguments);
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$ Argumnets to array ES5
+
+function isFullAge (){
+    const argsArr = Array.prototype.slice.call(arguments);
+    argsArr.forEach(curr=>{
+        let now = new Date().getFullYear();
+        console.log((now - curr) >= 18);
+    });
 }
+isFullAge(1987, 1982, 2010, 2002);
 
-ages('love', 12, 345);
+
