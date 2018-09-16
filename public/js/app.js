@@ -100,41 +100,43 @@ class Person {
 // }
 
 
-// $$$$$$$$$$$$$$$$$$$$$$$$ - Node List to array ES6 - Continue Break
-// const lines = document.querySelectorAll('.p-3');
-// const linesArr = Array.from(lines);
-// for(const curr of linesArr){
-//     if(curr[i].className === 'blue-blox'){
-//         linesArr[i].textContent = 'Celtas';
-//         break;
-//     }
-//     linesArr[i].style.backgroundColor = 'red';
-//     linesArr[i].textContent = 'Celtas';
-// }
-
+// $$$$$$$$$$$$$$$$$$$$$$$$ - Node List to array ES6 - Continue Breakkconst lines = document.querySelectorAll('.p-3');
+/* const lines = document.querySelectorAll('.p-3');
+const linesArr = Array.from(lines);
+for(const curr of linesArr){
+    if(curr.className.included === '.blue-blox'){
+        linesArr.textContent = 'eeeCeltas';
+        continue;
+    }
+    // linesArr.style.backgroundColor = 'red';
+    linesArr.textContent = 'Celtas';
+}
+ */
 
 
 // $$$$$$$$$$$$$$$$$$$$$$$$
 // Array ES5 - Cheking one element of the Array
-// const ages = [ 22, 16, 12, 17, 9, 10, 13 ];
-// const fullAge = ages.map(curr=>{
-//     console.log(curr >= 18);
-// });
-// console.log(ages[fullAge.indexOf(true)]);
+/* const ages = [ 12, 16, 12, 17, 9, 10, 34 ];
+const fullAge = ages.map(curr=>{
+    console.log(curr >= 18);
+});
+const isfull = ages[fullAge.indexOf(true)];
+
+console.log('This is the true ' + isfull); */
 
 
 // $$$$$$$$$$$$$$$$$$$$$$$$
 // Array ES6 - Cheking one element of the Array
-// const ages = [ 16, 12, 17, 9, 10, 22,  13 ];
+/* const ages = [ 16, 12, 17, 9, 10, 22,  13 ];
 
-// const fullAge = ages.map(curr => curr >= 18);
-// console.log(fullAge);
+const fullAge = ages.map(curr => curr >= 18);
+console.log(fullAge);
 
-// console.log(ages.find(curr => curr >= 18));
+console.log(ages.find(curr => curr >= 18));
 
-// console.log(ages.findIndex(curr => curr >= 18));
+console.log(ages.findIndex(curr => curr >= 18));
 
-
+*/
 // $$$$$$$$$$$$$$$$$$$$$$$$ Passing a entire Array into a function
 // es5 
 
@@ -168,14 +170,12 @@ class Person {
 
 
 // // $$$$$$$$$$$$$$$$$$$$$$$$ Spreed to acessing node elements
+
 // const h1 = document.querySelector('h1');
-
 // const lines = document.querySelectorAll('.p-3');
-
 // const union = [h1, ...lines];
-
 // Array.from(union).forEach(curr=>{
-//     curr.style.color = 'red';
+//     curr.style.color = 'blue';
 // });
 
 
@@ -189,13 +189,20 @@ class Person {
 
 // // $$$$$$$$$$$$$$$$$$$$$$$$ Argumnets to array ES5
 
-function isFullAge (){
-    const argsArr = Array.prototype.slice.call(arguments);
-    argsArr.forEach(curr=>{
-        let now = new Date().getFullYear();
-        console.log((now - curr) >= 18);
-    });
-}
-isFullAge(1987, 1982, 2010, 2002, 2017);
+// function isFullAge (){
+//     const argsArr = Array.prototype.slice.call(arguments);
+//     argsArr.forEach(curr=>{
+//         let now = new Date().getFullYear();
+//         console.log((now - curr) >= 18);
+//     });
+// }
+// isFullAge(1987, 1982, 2010, 2002, 2017);
 
+const ifFullAge = (...year) => {
+    console.log(...year + '  ');
+    year.forEach(curr=>{
+        console.log((2018 - curr ) >= 18);
+    });
+};
+ifFullAge(2000, 2013, 2012, 1978 );
 
