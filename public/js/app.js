@@ -36,11 +36,11 @@ box.clickMe();
 
 
 //  [ + ] [ + ] [ + ] [ + ]  Array exemple
-class Person {
-    constructor(name) {
-        this.name = name;
-    }
-}
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
 
 
 // $$$$$$$$$$$$$$$$$$$$$$$$ Section 07 - 109 - Destructuring Array
@@ -189,16 +189,16 @@ console.log(ages.findIndex(curr => curr >= 18));
 
 // // $$$$$$$$$$$$$$$$$$$$$$$$ Argumnets to array ES5
 
-function isFullAge (){
-    const argsArr = Array.prototype.slice.call(arguments);
-    argsArr.forEach(curr=>{
-        let argsArr = Array.prototype.slice.call(arguments, 1);
-        console.log(argsArr);
-        let now = new Date().getFullYear();
-        console.log((now - curr) >= 18);
-    });
-}
-isFullAge(1987, 1982, 2010, 2002, 2017);
+// function isFullAge (){
+//     const argsArr = Array.prototype.slice.call(arguments);
+//     argsArr.forEach(curr=>{
+//         let argsArr = Array.prototype.slice.call(arguments, 1);
+//         console.log(argsArr);
+//         let now = new Date().getFullYear();
+//         console.log((now - curr) >= 18);
+//     });
+// }
+// isFullAge(1987, 1982, 2010, 2002, 2017);
 
 /* const ifFullAge = (...year) => {
     console.log(...year + '  ');
@@ -210,3 +210,21 @@ isFullAge(1987, 1982, 2010, 2002, 2017);
 };
 ifFullAge(2000, 2013, 2012, 1978 );
  */
+
+
+
+// DEFAULT PARAMETE
+class Person{
+    constructor(firstName, yearOfBirth, Lastname, cityOfBirth){
+    
+     Lastname === undefined ? Lastname = 'mackenzie' : Lastname = Lastname; 
+     cityOfBirth === undefined ? cityOfBirth = 'lamcster' : cityOfBirth = cityOfBirth; 
+       
+      
+      this.firstName = firstName;
+      this.yearOfBirth = yearOfBirth;
+      this.Lastname = Lastname;
+      this.cityOfBirth = cityOfBirth;
+    }
+}
+const jhon = new Person('jhon', 1966);
