@@ -213,7 +213,7 @@ ifFullAge(2000, 2013, 2012, 1978 );
 
 
 
-// DEFAULT PARAMETE
+// Default parameters  ES5
 class Person{
     constructor(firstName, yearOfBirth, Lastname, cityOfBirth){
     
