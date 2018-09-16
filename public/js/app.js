@@ -192,7 +192,7 @@ console.log(ages.findIndex(curr => curr >= 18));
 function isFullAge (){
     const argsArr = Array.prototype.slice.call(arguments);
     argsArr.forEach(curr=>{
-        let argsArr = Array.prototype.slice.call(arguments, 2);
+        let argsArr = Array.prototype.slice.call(arguments, 1);
         console.log(argsArr);
         let now = new Date().getFullYear();
         console.log((now - curr) >= 18);
