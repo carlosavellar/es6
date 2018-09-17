@@ -253,6 +253,9 @@ question.set(2, 'Iron Myden');
 question.set(3, 'Agnostic Front');
 question.set(4, 'Headbreed');
 question.set('answear', 3);
+question.set(true,'Correct answear');
+question.set(false,'Wrong MDF');
+question.set('answear', 3);
 
 if(question.has(4)){
     console.log('The possible cool answear is HERE');
