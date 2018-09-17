@@ -231,8 +231,8 @@ const jhon = new Person('jhon', 1966); */
 
 
 
-// Default parameters  ES6
-class Person{
+// // Default parameters  ES6
+/* class Person{
     constructor(firstName, yearOfBirth, Lastname = 'lancaster', cityOfBirth = 'Mosory' ){
       this.firstName = firstName;
       this.yearOfBirth = yearOfBirth;
@@ -242,3 +242,21 @@ class Person{
 }
 const jhon = new Person('jhon', 1966);
 const mag = new Person('Magali', 1990);
+ */
+
+// Map
+
+const question = new Map();
+question.set('question', 'What is the best Metal Band of the World?');
+question.set(1, 'Pantera');
+question.set(2, 'Iron Myden');
+question.set(3, 'Agnostic Front');
+question.set(4, 'Headbreed');
+question.set('answear', 3);
+
+if(question.has(4)){
+    console.log('The possible cool answear is HERE');
+}
+
+console.log(question.get('question'));
+console.log(question.size);
