@@ -213,7 +213,7 @@ ifFullAge(2000, 2013, 2012, 1978 );
 
 
 
-// Default parameters  ES5
+// // $$$$$$$$$$$$$$$$$$$$$$$$ // Default parameters  ES5
 /* class Person{
     constructor(firstName, yearOfBirth, Lastname, cityOfBirth){
     
@@ -231,7 +231,7 @@ const jhon = new Person('jhon', 1966); */
 
 
 
-// // Default parameters  ES6
+// // $$$$$$$$$$$$$$$$$$$$$$$$  // Default parameters  ES6
 /* class Person{
     constructor(firstName, yearOfBirth, Lastname = 'lancaster', cityOfBirth = 'Mosory' ){
       this.firstName = firstName;
@@ -244,8 +244,8 @@ const jhon = new Person('jhon', 1966);
 const mag = new Person('Magali', 1990);
  */
 
-// Map
-
+// // $$$$$$$$$$$$$$$$$$$$$$$$ Map
+/* 
 const question = new Map();
 question.set('question', 'What is the best Metal Band of the World?');
 question.set(1, 'Pantera');
@@ -261,8 +261,8 @@ if(question.has(4)){
     console.log('The possible cool answear is HERE');
 }
 
-// console.log(question.get('question'));
-// console.log(question.size);
+console.log(question.get('question'));
+console.log(question.size);
 
 for(let [key, value] of question.entries()){
 
@@ -275,3 +275,23 @@ for(let [key, value] of question.entries()){
         console.log(ans); 
     }
 }
+ */
+
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$ classes 
+// ES5
+
+function Person(name, yearOfbirth, cityOfBirth){
+    this.name = name;
+    this.yearOfbirth = yearOfbirth;
+    this.cityOfBirth = cityOfBirth;
+}
+Person.prototype.calcAge = function (){
+    let now = new Date().getFullYear();
+    return now - this.yearOfbirth;
+}
+
+const jose = new Person('José Carlos', 1978, 'São Paulo');
+
+console.log(jose);
+console.log(jose.calcAge());
