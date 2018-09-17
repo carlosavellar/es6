@@ -300,8 +300,7 @@ console.log(jose.calcAge()); */
 
 // // $$$$$$$$$$$$$$$$$$$$$$$$ classes 
 // ES6
-
-class Person{
+/* class Person{
     constructor(name, yeasrOfBirth, cityOfBirth){
         this.name = name;
         this.yeasrOfBirth = yeasrOfBirth;
@@ -319,3 +318,33 @@ const maria = new Person('Maria Clorde', 1986, 'Michigan');
 console.log(maria);
 console.log(maria.calcaAge());
 Person.lembrance();
+ */
+
+
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$ classes es5 inheritance
+
+
+function Person(name, yearOfbirth, cityOfBirth){
+    this.name = name;
+    this.yearOfbirth = yearOfbirth;
+    this.cityOfBirth = cityOfBirth;
+}
+Person.prototype.calcAge = function (){
+    let now = new Date().getFullYear();
+    return now - this.yearOfbirth;
+}
+
+// Inheriting Person prototype
+function Athlete(name, yearOfbirth, cityOfBirth, sport, power){
+     Person.call(this, name, yearOfbirth, cityOfBirth);
+     this.sport = sport;
+     this.power = power;
+}
+
+Athlete.prototype = Object.create(Person.prototype);
+
+const carl = new Athlete('Carel Maerx', 1945, 'New Yourk', 'Taekwon-do', 90);
+
+console.log(carl);
+console.log(carl.calcAge());
