@@ -214,7 +214,7 @@ ifFullAge(2000, 2013, 2012, 1978 );
 
 
 // Default parameters  ES5
-class Person{
+/* class Person{
     constructor(firstName, yearOfBirth, Lastname, cityOfBirth){
     
      Lastname === undefined ? Lastname = 'mackenzie' : Lastname = Lastname; 
@@ -227,4 +227,18 @@ class Person{
       this.cityOfBirth = cityOfBirth;
     }
 }
+const jhon = new Person('jhon', 1966); */
+
+
+
+// Default parameters  ES6
+class Person{
+    constructor(firstName, yearOfBirth, Lastname = 'lancaster', cityOfBirth = 'Mosory' ){
+      this.firstName = firstName;
+      this.yearOfBirth = yearOfBirth;
+      this.Lastname = Lastname;
+      this.cityOfBirth = cityOfBirth;
+    }
+}
 const jhon = new Person('jhon', 1966);
+const mag = new Person('Magali', 1990);
