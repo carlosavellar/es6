@@ -281,7 +281,7 @@ for(let [key, value] of question.entries()){
 // // $$$$$$$$$$$$$$$$$$$$$$$$ classes 
 // ES5
 
-function Person(name, yearOfbirth, cityOfBirth){
+/* function Person(name, yearOfbirth, cityOfBirth){
     this.name = name;
     this.yearOfbirth = yearOfbirth;
     this.cityOfBirth = cityOfBirth;
@@ -294,4 +294,28 @@ Person.prototype.calcAge = function (){
 const jose = new Person('José Carlos', 1978, 'São Paulo');
 
 console.log(jose);
-console.log(jose.calcAge());
+console.log(jose.calcAge()); */
+
+
+
+// // $$$$$$$$$$$$$$$$$$$$$$$$ classes 
+// ES6
+
+class Person{
+    constructor(name, yeasrOfBirth, cityOfBirth){
+        this.name = name;
+        this.yeasrOfBirth = yeasrOfBirth;
+        this.cityOfBirth = cityOfBirth;
+    }
+    calcaAge(){
+        let now = new Date().getFullYear();
+        return now - this.yeasrOfBirth;
+    }
+    static lembrance(){
+        console.log('This is the prototype');
+    }
+}
+const maria = new Person('Maria Clorde', 1986, 'Michigan');
+console.log(maria);
+console.log(maria.calcaAge());
+Person.lembrance();
