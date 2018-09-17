@@ -22,17 +22,17 @@
 
 //  [ + ] [ + ] [ + ] [ + ] 
 // This word
-const box = {
+/* const box = {
     color: 'red',
     color2: 'blue',
     clickMe: () => {
-        // document.querySelector(".btn-danger").addEventListener('click', () => {
-        //     // thisWord.innerHTML = ''`${this.color} and ${this.color2}`'';
-        //     thisWord.innerHTML = this.color; //doesn't show show the box.color property bucouse This inside aroorw functions point to the Global obs
-        // });
+        document.querySelector(".btn-danger").addEventListener('click', () => {
+            thisWord.innerHTML = ''`${this.color} and ${this.color2}`'';
+            thisWord.innerHTML = this.color; //doesn't show show the box.color property bucouse This inside aroorw functions point to the Global obs
+        });
     }
 };
-box.clickMe();
+box.clickMe(); */
 
 
 //  [ + ] [ + ] [ + ] [ + ]  Array exemple
@@ -252,14 +252,26 @@ question.set(1, 'Pantera');
 question.set(2, 'Iron Myden');
 question.set(3, 'Agnostic Front');
 question.set(4, 'Headbreed');
-question.set('answear', 3);
+question.set('correct', 4);
 question.set(true,'Correct answear');
 question.set(false,'Wrong MDF');
-question.set('answear', 3);
+
 
 if(question.has(4)){
     console.log('The possible cool answear is HERE');
 }
 
-console.log(question.get('question'));
-console.log(question.size);
+// console.log(question.get('question'));
+// console.log(question.size);
+
+for(let [key, value] of question.entries()){
+
+    if(typeof(key) === 'number'){
+        // console.log(`Essa é o key: ${key}, esse é o Valor: ${value}`);
+
+         let ans = parseInt(prompt('Answer the question'));
+         
+        console.log(question.get(ans === question.get('correct')));
+        console.log(ans); 
+    }
+}
