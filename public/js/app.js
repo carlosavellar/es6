@@ -325,7 +325,7 @@ Person.lembrance();
 // // $$$$$$$$$$$$$$$$$$$$$$$$ Super classes es5 inheritance
 
 
-function Person(name, yearOfbirth, cityOfBirth){
+/* function Person(name, yearOfbirth, cityOfBirth){
     this.name = name;
     this.yearOfbirth = yearOfbirth;
     this.cityOfBirth = cityOfBirth;
@@ -344,7 +344,7 @@ function Athlete(name, yearOfbirth, cityOfBirth, sport, medals){
 
 Athlete.prototype = Object.create(Person.prototype);
 
-// metho only for Athelete class
+// method only for Athelete class
 Athlete.prototype.wonMedals = function(){
     this.medals++;
     console.log(this.medals);
@@ -356,3 +356,38 @@ console.log(carl);
 console.log(carl.calcAge());
 console.log(carl.medals);
 carl.wonMedals();
+ */
+
+
+ // // $$$$$$$$$$$$$$$$$$$$$$$$  inheritance super classes 
+// ES6
+class Person6{
+    constructor(name, yeasrOfBirth, cityOfBirth){
+        this.name = name;
+        this.yeasrOfBirth = yeasrOfBirth;
+        this.cityOfBirth = cityOfBirth;
+    }
+    calcaAge(){
+        let now = new Date().getFullYear();
+        return now - this.yeasrOfBirth;
+    }
+    static lembrance(){
+        console.log('This is the prototype');
+    }
+}
+
+class Athlete extends Person6{
+    constructor(name, yeasrOfBirth, cityOfBirth, sport, medals){
+        super(name, yeasrOfBirth, cityOfBirth);
+        this.sport = sport;
+        this.medals = medals;
+    }
+    wonMedal(){
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+const jose = new Athlete('José Carlos', 1978, 'Såo Paulo', 'Run', 3);
+console.log(jose);
+console.log(jose.calcaAge());
+console.log(jose.wonMedal());
