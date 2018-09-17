@@ -322,7 +322,7 @@ Person.lembrance();
 
 
 
-// // $$$$$$$$$$$$$$$$$$$$$$$$ classes es5 inheritance
+// // $$$$$$$$$$$$$$$$$$$$$$$$ Super classes es5 inheritance
 
 
 function Person(name, yearOfbirth, cityOfBirth){
@@ -336,15 +336,23 @@ Person.prototype.calcAge = function (){
 }
 
 // Inheriting Person prototype
-function Athlete(name, yearOfbirth, cityOfBirth, sport, power){
+function Athlete(name, yearOfbirth, cityOfBirth, sport, medals){
      Person.call(this, name, yearOfbirth, cityOfBirth);
      this.sport = sport;
-     this.power = power;
+     this.medals = medals;
 }
 
 Athlete.prototype = Object.create(Person.prototype);
 
-const carl = new Athlete('Carel Maerx', 1945, 'New Yourk', 'Taekwon-do', 90);
+// metho only for Athelete class
+Athlete.prototype.wonMedals = function(){
+    this.medals++;
+    console.log(this.medals);
+}
+
+const carl = new Athlete('Carel Maerx', 1945, 'New Yourk', 'Taekwon-do', 10);
 
 console.log(carl);
 console.log(carl.calcAge());
+console.log(carl.medals);
+carl.wonMedals();
