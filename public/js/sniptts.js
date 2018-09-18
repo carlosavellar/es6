@@ -361,7 +361,7 @@ carl.wonMedals();
 
  // // $$$$$$$$$$$$$$$$$$$$$$$$  inheritance super classes 
 // ES6
-class Person6{
+/* class Person6{
     constructor(name, yeasrOfBirth, cityOfBirth){
         this.name = name;
         this.yeasrOfBirth = yeasrOfBirth;
@@ -390,4 +390,68 @@ class Athlete extends Person6{
 const jose = new Athlete('José Carlos', 1978, 'Såo Paulo', 'Run', 3);
 console.log(jose);
 console.log(jose.calcaAge());
-console.log(jose.wonMedal());
+jose.wonMedal();
+ */
+
+
+
+
+
+
+
+
+
+// const ages = [12,45,67, 45];
+
+// const sum3 = someAges(...ages);
+// console.log(sum3);
+
+
+// ---
+
+
+
+
+
+
+
+
+
+/* const ages = [12, 1, 19, 16, 10, 7];
+
+const isfull = ages.map(curr => { 
+    return curr > 18;
+});
+
+console.log(isfull.indexOf(true));
+console.log(ages[isfull.indexOf(true)]);
+
+
+// Encontrar parke com mais de 1000 arvores;
+console.log(ages.find(curr => curr > 18));
+console.log(ages.findIndex(curr => curr > 18));
+ */
+// const ages = [1, 4, 56, 12, 45, 34];
+
+
+// Fazer as smo das idades
+// ages.forEach(curr=> sum += curr); or using rest
+
+
+
+
+/*  in charge of two (2) town elements: Parks ans Streets.
+3 parks and 4 streets
+
+all parks and streets must have a name and a built year
+at the end oth the year BOSS wants a final report of the folowing data:
+
+1 - Know the tree density of each park in the town . by dividing by the total number of threes by the park area
+2 - the average age of each town;s park. Calculated by adding columniated by adding up all park ages and dividing by the number of parks.
+3 -  The name of the park park which have more then 1000 trees.
+4 - Total and the average lemght of the totlas streets
+5 - Size classification of each of the streets: tiny normal, big and huge. 
+if the size is unknow the site is alwasy normal;
+
+7  -  All this reposrt data shoul;d be printed to the console
+ */
