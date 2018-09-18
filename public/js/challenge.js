@@ -13,7 +13,7 @@ class Parks extends Element{
     }
     density(){
         this.density = this.area / this.trees;
-        console.log(`This is the park ${this.name}, this area is ${this.area}`);
+        console.log(`This is the park ${this.name}, this area is: ${this.area}`);
     }
 }
 
@@ -23,6 +23,5 @@ class Streets extends Element{
         super(name, buildyear);
             this.length = length;
             this.size = size;
-        
     }
 }
