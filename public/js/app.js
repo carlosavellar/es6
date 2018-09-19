@@ -1,59 +1,35 @@
-class Element {
-    constructor(name, buildyear){
+class Element{
+    constructor(name, builtYear){
         this.name = name;
-        this.buildyearname = buildyear;
+        this.builtYear = builtYear;
     }
 }
 
 class Parks extends Element{
-    constructor(name, buildyear, area, trees){
-        super(name, buildyear);
-        this.area = area;
+    constructor(name, builtYear, trees, area){
+        super(name, builtYear);
         this.trees = trees;
+        this.area = area;
     }
-    density(){
-        this.density = this.area / this.trees;
-        console.log(`This is the park ${this.name}, this area is: ${this.area}`);
-    }
-}
-
-
-class Street extends Element{
-    constructor(name, buildyear, length, size = 3){
-        super(name, buildyear);
-            this.length = length;
-            this.size = size;
+    treeDensity(){
+        this.density = this.trees /this.area;
+        console.log(`${this.name} has a density of trees of ${this.density}`);
     }
 }
 
-const arrParks =[new Parks('Aluna Park', 1987, 0.2, 808),
-new Parks('Seiloor Park ', 1887, 1.2, 3888), new Parks('Mnellano Park', 1836, 2.1, 9299)];
-
-const arrStreet = [new Street('Loucard Avenue', 1902, 1.2), new Street('Quiinta Avenida', 1967, 1.9, 4), new Street('QLinda Co ', 1997, 1.9, 2), new Street('Paulo Costa Mother Fucker ', 1888, 1.3, 3)];
-
-function calc(ages){
-    let sum = ages.reduce((prev, curr, index) => prev + curr, 0);
-    return [sum, sum / ages.length];
+class Streets extends Element{
+    constructor(name, builtYear, length, size){
+        super(name, builtYear);
+        this.length = length;
+        this.size = size;
+    }
+    classiFyingStreets(){
+        const classification = new Map();
+        classification.set(1, 'Tiny');
+        classification.set(2, 'Small');
+        classification.set(3, 'Normal');
+        classification.set(4, 'Big');
+        classification.set(5, 'Huge');
+        console.log(`${this.name} has a ${classification.get(this.size)} size`);
+    }
 }
-
-
-function reportParks(p){
-    p.forEach(curr => curr.density());
-
-    const ages = p.map(curr=> new Date().getFullYear() - curr.buildyearname);
-    const [total, totalAverage] = calc(ages);
-    console.log(`The total age of the parks is ${p.length}, and the average age is ${Math.round(totalAverage)})`);
-
-    const i = p.map(el=>el.trees).findIndex(el=>el >= 1000);
-    console.log(`The park with with morer than 1000 trees is ${p[i.name]}`);
-
-
-}
-
-const reportStreets =s=>{
-    const [totalLength, averagelength] = calc(s.map(el=>{el.length}));
-    console.log(`our ${s.length} streets have the total length of ${totalLength}, and the average length is ${averagelength}`);
-};
-
-reportParks(arrParks);
-reportStreets(arrStreet);
